@@ -13,13 +13,15 @@ const AddCategory = ({ setCategories }) => {
     const handleSubmit = (e) => {
         e.preventDefault(); //para que no refresque la página
         if (inputValue.trim().length > 2){
-            setCategories(cats => [ inputValue,...cats,]);
+            setCategories(cats => [ inputValue, ...cats,]);
             setInputValue('');
         }
     }
     
     return (
         <form onSubmit={ handleSubmit }>
+            {/*Este parrafo esta solo para las pruebas*/}
+            <p>{inputValue}</p>
             <input
                 type="text"
                 value={ inputValue }
